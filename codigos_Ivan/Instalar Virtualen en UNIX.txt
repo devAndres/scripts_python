@@ -1,0 +1,25 @@
+
+Pasos actualizados para instalar VIRTUALEN en UNIX
+
+# Install virtualenv
+sudo apt install virtualenv
+
+# Create a directory for isolated environments
+cd ~/projects/
+mkdir virtualenvironments
+cd virtualenvironments
+
+# Create the new environment. With vagrant, create it outside vagrant folder or use --always-copy
+virtualenv [--always-copy] data_analysis_env
+
+# If you would like to create a virtualenv for Python 3
+virtualenv [--always-copy] data_analysis_env -p python3
+
+# Activate the new environment
+source data_analysis_env/bin/activate
+
+# Install Dependencies
+pip install -r requirements.txt
+
+# Deactivate the current environment
+deactivate
