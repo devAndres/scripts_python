@@ -1,0 +1,27 @@
+Creo repositorio en Github.com y copio la URL
+git init
+	git add README.md
+	git commit -m "Comentario"
+git remote add origin https://github.com/devAndres/macros_vba.git
+git push -u origin master
+
+
+git status
+git add -A
+	git add .gitignore
+git commit - m "Comentario"
+git push -u origin master
+
+
+Machacar remoto con el local
+git push --force
+
+Borrar del Stagin Area :
+git rm --chached fichero
+
+
+
+
+
+
+
