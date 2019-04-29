@@ -6,10 +6,55 @@
 ****************************************************************
 
 Strings
-    Mejor usar utilizar formatos, q concatenar
+
+    Se puede usar comillas "dobles" o 'simples'     ¿¿ Diferencias ??
     Si se definen entre '3 comillas simples o dobles', pueden contener comillas y lineas en blanco
 
+    Mejor usar utilizar formatos, q concatenar
 
+
+BÁSICAS :
+str( numero )                           # Devuelvo cadena, a partir de parsear un valor numérico
+len( cadena )                           # Devuelvo nº de chars de la cadena
+cadena.count( 'string buscado' )        # Devuelvo nº de apariciones de la subcadena, en la cadena
+
+OTROS :
+cadena.join( '====' )                   # Concatena ?????
+cadena.split( 'separador' )             # Devuelvo Lista, a partir de dividir la cadena en base al separador
+cadena.partition( 'separador' )         # Devuelvo Tupla, a partir de dividir la cadena en base al separador
+cadena.replace( 'buscado', 'sustituto', numSustituciones? )
+
+BÚSQUEDAS :
+cadena.find( 'string buscado' )         # Devuelvo la posición de la subcadena en la cadena (-1 si no encuentro)
+cadena.startsWith( "buscado" )          # Devuelvo boleano, en función de si la cadena empieza con la subcadena
+cadena.endsWith( "buscado" )            # Devuelvo boleano, en función de si la cadena acaba con la subcadena
+
+FORMATEOS :
+
+cadena.upper()                              # Devuelco cadena convertida a mayúscula
+cadena.lower()                              # Devuelco cadena convertida a minúscula
+
+# Devuelvo cadena, eliminando espacios, \t, \n, \r
+cadena.rstrip()                             # Eliminando a la derecha
+cadena.lstrip()                             # Eliminando a la izquierda
+cadena.strip( 'caracteres a borrar' )       # Eliminando los caracteres que estén en la subcadena
+
+ACCESO A PARTES DE UNA CADENA (substring) :
+Nota : La coordenada final, es no inclusiva.
+
+cadena = 'Andrés'
+
+cadena[0]               # 'A'       # Devuelvo un char (N) de la cadena
+
+cadena[0:4]             # 'And'     # Devuelvo subcadena con los chars, desde la pos 0 a la 4
+cadena[:4]              # 'And'     # Devuelvo subcadena con los chars, desde la pos 0 a la 4
+
+cadena[2:4]             # 'dr'      # Devuelvo subcadena con los chars, desde la pos 2 a la 4
+
+cadena[4:leng(cadena)]  # 'és'       # Devuelvo subcadena con los chars, desde la pos 4 al final de la cadena
+cadena[4:]              # 'és'       # Devuelvo subcadena con los chars, desde la pos 4 al final de la cadena
+
+cadena[:-3]             # 'and'     # Devuelvo subcadena con los chars, desde la pos 0 a la 3 (todo, menos los 3 últimos chars)
 
 ****************************************************************
 
@@ -83,6 +128,46 @@ l.remove('g')   # elimino. Si no existe lanza KeyError
 
 if 'g' in l:
     print('existe')
+
+****************************************************************
+
+    OPERADORES :
+
+
+PARA SECUENCIAS :
+in
+not in
+is
+is not
+
+****************************************************************
+
+
+
+****************************************************************
+
+OS
+
+Se puede utilizar '.' para referirse al directorio actual.
+
+import os
+
+os.getcwd()             # Devuelvo el Current Working Directory (Unicode para Python 3.X)
+os.getcwdu()            # En Python 2.X, devuelve en formato Unicode
+os.listdir( path )      # Devuelvo Lista con los archivos y carpetas contenidas en el path
+                        # Python 2.X -> Si se le pasa un objeto Unicode, los items recibidos, mantienen esa codificación, si es posible
+                        # Python 3.X -> Permite especificar directorio de tipo bytes
+os.rmdir()
+
+****************************************************************
+
+
+
+
+
+
+
+
 
 """
 
