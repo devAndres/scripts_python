@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding:utf-8 -*-
+
 """
 
 Proceso Directorios
@@ -5,65 +8,92 @@ Proceso Directorios
 """
 
 # Importo librerías
-import time
+import ficheros
+import consola
+
 import os
 
-
-path_entrada = ""
-path_salida = ""
-
-partes_path
-separador_path
-
-# Obtengo el carácter que separa las partes del path
-if path_entrada != ""
-    partes_path = path_entrada.split( '/' )
-    if partes_path.length() > 0
-        separador_path = '/'
-    partes_path = path_entrada.split( '\' )
-    if partes_path.length() > 0
-        separador_path = '\'
-    else
-        separador = '/'
+#import tkinter
+#import calendar
+#from TKinter import *
+#from tkMessageBox import *
 
 
 
-# Compruebo si es un Fichero o si es un Directorio
-#partes_path = path_entrada.split( '.' )
-if path-entrada.find('.') != -1 and path_entrada.find('.') > path_entrada.find(separador_path)
-    print( 'Es un fichero' )
-else
-    print( 'Es un directorio' ) #o un fichero sin extensión' )
+
+#
+#   VARIABLES DE PROGRAMA :
+#
+
+opciones_menu = [
+    "Menú principal",
+    "Copiar",
+    "Mover",
+    "Otro",
+    "Salir"
+]
 
 
-# Compruebo si está en una ruta o no (directorio actual)
-if path_entrada.find( separador_path ) == -1
-    print( ' dentro el directorio actual' )
-else
-    print( ' en una ruta compuesta por %s directorios' % path_entrada.count(separador_path) )
+path_entrada = os.getcwd() + "dir_a/texto.txt"
+path_salida = os.getcwd() + "dir_b"
 
+partes_path = []
+separador_path = '/'
+
+
+
+
+#
+#   PROGRAMA :
 #
 
 
 
-# Si es un Fichero, lo copio a su destino
-
-# path + fichero
-
-# fichero en dir actual (solo nombre.ext)
+# Muestro la cabecera
+consola.print_cabecera( "Programa Python 3", "=", 60 )
+consola.print_info()
 
 
+# Muestro menú
+while true :
+    op = consola.print_menu( opciones_menu )
 
-# Si es un Directorio, lo recorro recursivamente,
-# almacenando la estructura de ficheros en memoria,
-# para copiar el contenido a su destino
+    # Actúo en base a la acción introducida por el usuario
+    if op == -1 :
+        break
+    else :
+        print( "Has seleccionado : %s" % opciones_menu[op] )
+    """
+    if op == 1 :
+        print()
+    elif op == 2 :
+        print()
+    elif op == 3 :
+        print()
+    if op != -1 :
+    """
 
-# path con varios directorios
-
-# un solo directorio
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tkinter.Tcl().eval( "info patchlevel" )
 
 
 
@@ -72,5 +102,19 @@ else
 #function getseparador(  )
 
 
+#showerror( "Título", "Esto es el contenido" )
+#askyes( "Título", "Esto es el contenido" )
+#showerror( "Título", "Esto es el contenido" )
 
-time.sleep( 30 )
+time.sleep( 0.5 )
+print( "" )
+print( "Fin de programa" )
+print( "Pulsa ENTER para finalizar .", end="" )
+for i in range( 0, 10 ) :
+    print( ".", end="" )
+    time.sleep( 0.45 )
+input()
+time.sleep( 0.5 )
+limpiar_consola()
+time.sleep( 0.5 )
+
